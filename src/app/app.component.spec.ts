@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './header/header.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { SideMenuItemComponent } from './side-menu/side-menu-item/side-menu-item.component';
 import { FooterComponent } from './footer/footer.component';
 
 describe('AppComponent', () => {
@@ -17,7 +18,8 @@ describe('AppComponent', () => {
         AppComponent,
         FooterComponent,
         HeaderComponent,
-        SideMenuComponent
+        SideMenuComponent,
+        SideMenuItemComponent
       ],
     }).compileComponents();
   }));

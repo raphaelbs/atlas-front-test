@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MENU } from './../menu';
+import { IMenuItem } from './../interfaces/menu-item.interface';
 
 @Component({
   selector: 'app-side-menu',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-menu.component.scss']
 })
 export class SideMenuComponent implements OnInit {
+
+  menu: IMenuItem[] = MENU;
 
   constructor() { }
 
