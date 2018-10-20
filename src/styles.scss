@@ -1,2 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap.scss';
+
+/* COLORS */
+$_BLUE: #0081A7;
+$_GREEN: #00B286;
+$_SHADOW_BOX: rgba(0, 0, 0, 0.2199999988079071);
+$_BG_COLOR: #EDF3F0;
+$_HEADER_BG_COLOR: #FFFFFF;
+
+/* SPACINGs */
+$_HEADER_HEIGHT: 65px;
+$_SIDE_MENU_WIDTH: 293px;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
