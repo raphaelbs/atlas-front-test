@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from './../interfaces/user.interface';
+import { USER } from './../user';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  user: {
-    avatar: string;
-    name: string;
-  } = {
-    avatar: 'assets/ic_person.svg',
-    name: 'Manoel Neto'
-  };
+  user: IUser = USER;
 
   constructor() { }
 
