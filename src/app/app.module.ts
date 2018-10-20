@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { SideMenuItemComponent } from './side-menu/side-menu-item/side-menu-item.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     SideMenuComponent,
     FooterComponent,
+    SideMenuItemComponent,
   ],
   imports: [
     BrowserModule,

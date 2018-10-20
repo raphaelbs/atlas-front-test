@@ -1,0 +1,16 @@
+@import '~styles.scss';
+
+div.side-menu-item {
+  border-radius: $_MENU_ITEM_RADIUS;
+  box-shadow: 0 0 20px 0 $_MENU_ITEM_SHADOW_BOX;
+  height: 40px;
+  width: 100%;
+  background-color: $_MENU_ITEM_BG_COLOR;
+  margin: 5px 0px;
+  color: $_TEXT_COLOR;
+
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+}
