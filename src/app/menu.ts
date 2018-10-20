@@ -1,7 +1,4 @@
-export interface IMenuItem {
-  icon: string;
-  description: string;
-}
+import { IMenuItem } from './interfaces/menu-item.interface';
 
 export const MENU: IMenuItem[] = [
   {
