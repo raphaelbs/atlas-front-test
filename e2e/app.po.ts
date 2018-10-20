@@ -5,7 +5,15 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getMain() {
+    return element(by.css('div.main'));
+  }
+
+  getRouterContainer() {
+    return element(by.css('div.main > div.router-container'));
+  }
+
+  getOutlet() {
+    return element(by.css('div.main > div.router-container > div.outlet'));
   }
 }

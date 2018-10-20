@@ -50,12 +50,4 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('router-outlet')).not.toBeNull();
   }));
-  it('should find classes .main, .router-container and .outlet', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('div.main')).not.toBeNull();
-    expect(compiled.querySelector('div.main > div.router-container')).not.toBeNull();
-    expect(compiled.querySelector('div.main > div.router-container > div.outlet')).not.toBeNull();
-  }));
 });
