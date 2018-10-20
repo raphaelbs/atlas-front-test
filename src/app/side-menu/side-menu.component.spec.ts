@@ -4,7 +4,7 @@ import { MENU } from './../menu';
 import { SideMenuItemComponent } from './side-menu-item/side-menu-item.component';
 import { SideMenuComponent } from './side-menu.component';
 
-fdescribe('SideMenuComponent', () => {
+describe('SideMenuComponent', () => {
   let component: SideMenuComponent;
   let fixture: ComponentFixture<SideMenuComponent>;
   let compiled;
