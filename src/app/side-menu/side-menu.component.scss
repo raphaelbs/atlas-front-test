@@ -1,7 +1,20 @@
 @import '~styles.scss';
 
-:host {
+div.side-menu {
   width: $_SIDE_MENU_WIDTH;
   height: 100%;
   background-image: linear-gradient(180deg, $_GREEN 0%, $_BLUE 100%);
+
+  div.img-container {
+    height: $_HEADER_HEIGHT;
+  }
+
+  div.menu-container {
+    width: $_ITEM_MENU_WIDTH;
+    border-top: 1px solid $_MENU_DIVISOR_COLOR;
+  }
+
+  div.spacing {
+    height: 10px;
+  }
 }

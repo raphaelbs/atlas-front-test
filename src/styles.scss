@@ -1,20 +1,30 @@
 @import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
 /* COLORS */
+
+/* SIDE_MENU */
 $_BLUE: #0081A7;
 $_GREEN: #00B286;
-$_SHADOW_BOX: rgba(0, 0, 0, 0.2199999988079071);
-$_BG_COLOR: #EDF3F0;
+$_TEXT_COLOR: #00A685;
+$_MENU_DIVISOR_COLOR: rgba(255, 255, 255, 0.30);
+$_MENU_ITEM_SHADOW_BOX: rgba(0, 0, 0, 0.30);
+$_MENU_ITEM_RADIUS: 50px;
+$_MENU_ITEM_BG_COLOR: #FFFFFF;
+/* HEADER */
 $_HEADER_BG_COLOR: #FFFFFF;
+$_SHADOW_BOX: rgba(0, 0, 0, 0.22);
+/* CONTAINER */
+$_BG_COLOR: #EDF3F0;
 
 /* SPACINGs */
-$_HEADER_HEIGHT: 65px;
+
+/* SIDE_MENU */
 $_SIDE_MENU_WIDTH: 293px;
+$_ITEM_MENU_WIDTH: 253px;
+/* HEADER */
+$_HEADER_HEIGHT: 65px;
 
-html {
-  height: 100%;
-}
-
-body {
+html, body {
   height: 100%;
 }
