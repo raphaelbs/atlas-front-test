@@ -6,7 +6,7 @@ sudo: false
 
 branches:
   only:
-  - master
+  - develop
 
 cache:
   directories:
@@ -16,12 +16,13 @@ install:
   - npm install -g yarn
 
 script:
+  - yarn
   - yarn lint
   - yarn build --base-href https://raphaelbs.github.io/atlas-front-test/
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/atlas-front-test
+  local_dir: dist
   on:
     branch: master
