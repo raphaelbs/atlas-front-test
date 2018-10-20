@@ -1,0 +1,10 @@
+@import '~styles.scss';
+
+:host {
+  box-shadow: 0 0 5px 0 $_SHADOW_BOX;
+  width: 100%;
+  height: $_HEADER_HEIGHT;
+  background-color: $_HEADER_BG_COLOR;
+  display: block;
+  position: relative;
+}

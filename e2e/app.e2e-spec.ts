@@ -7,8 +7,18 @@ describe('atlas-front-test App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should find .main', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getMain()).not.toBeNull();
+  });
+
+  it('should find .router-container', () => {
+    page.navigateTo();
+    expect(page.getRouterContainer()).not.toBeNull();
+  });
+
+  it('should find .outlet', () => {
+    page.navigateTo();
+    expect(page.getOutlet()).not.toBeNull();
   });
 });

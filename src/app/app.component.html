@@ -1,4 +1,10 @@
-<app-header></app-header>
-<app-side-menu></app-side-menu>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="main d-flex">
+  <app-side-menu></app-side-menu>
+  <div class="col p-0 router-container d-flex flex-column">
+    <app-header></app-header>
+    <div class="outlet flex-fill">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

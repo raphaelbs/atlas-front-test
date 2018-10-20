@@ -1,0 +1,15 @@
+@import '~styles.scss';
+
+:host {
+  height: 100%;
+  width: 100%;
+
+  div.main {
+    height: 100%;
+    width: 100%;
+
+    div.router-container {
+      background-color: $_BG_COLOR;
+    }
+  }
+}
