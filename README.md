@@ -1,27 +1,48 @@
-# AtlasFrontTest
+# Atlas Front Test - Lucros
+[![Build Status](https://travis-ci.org/raphaelbs/atlas-front-test.svg?branch=develop)](https://travis-ci.org/raphaelbs/atlas-front-test)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Este é um projeto de teste para seleção. Basea-se nas tecnologias Angular 5, Typescript e Versionamento com git.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Acesse o resultado final do projeto em:
+> https://raphaelbs.github.io/atlas-front-test/
 
-## Code scaffolding
+## Integrações
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Pipeline de CI e CD pelo [travis](travis-ci.org).
+- Publicação no [GithubPages](https://pages.github.com/)
 
-## Build
+## O teste
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+O valor depositado pelo cliente na plataforma obteve lucro diário. O lucro foi estabelecido a partir do dia do depósito até a data corrente.
 
-## Running unit tests
+A tela prototipada possui as definições que o User Experience desenvolveu a melhor solução para a apresentação das informações ao cliente.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Observação do User Experience:
 
-## Running end-to-end tests
+> O valor do rendimento é diário, cada linha da tabela corresponde a valorização em moeda BitCoin (BTC) e o percentual rendido. Na última coluna da tabela existirá o somatório do dia anterior com o saldo do dia corrente
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Referências
 
-## Further help
+[Acesse o protótipo ![protótipo](./resources/prototype.png)](https://marvelapp.com/313a1ga/screen/44471533/handoff)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+[Acesse o mock da API](http://www.mocky.io/v2/5b2c010d300000100023487a)
+```json
+[
+  {
+    "dateMoviment": "2018-11-07 21:51:03",
+    "coin": "BTC",
+    "proft": "0.668255",
+    "profitPercentage": 38
+  },
+  {
+    "dateMoviment": "2019-01-05 14:12:55",
+    "coin": "BTC",
+    "proft": "2.725550",
+    "profitPercentage": 35
+  },
+]
+```
