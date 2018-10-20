@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  user: {
+    avatar: string;
+    name: string;
+  } = {
+    avatar: 'assets/ic_person.svg',
+    name: 'Manoel Neto'
+  };
+
   constructor() { }
 
   ngOnInit() {

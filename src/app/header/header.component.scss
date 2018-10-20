@@ -1,10 +1,19 @@
 @import '~styles.scss';
 
-:host {
-  box-shadow: 0 0 5px 0 $_SHADOW_BOX;
+.header {
+  box-shadow: 0 0 5px 0 $_HEADER_SHADOW_BOX;
   width: 100%;
   height: $_HEADER_HEIGHT;
   background-color: $_HEADER_BG_COLOR;
-  display: block;
-  position: relative;
+  padding: 0 $_HEADER_PADDING_X;
+
+  .user {
+    .name {
+      font-family: 'Roboto';
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      color: $_HEADER_USER_COLOR;
+    }
+  }
 }
