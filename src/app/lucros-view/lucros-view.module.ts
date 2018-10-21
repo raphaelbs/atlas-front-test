@@ -31,8 +31,7 @@ const routes: Routes = [
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       },
-      useDefaultLang: true,
-      isolate: true
+      useDefaultLang: true
     })
   ],
   declarations: [
