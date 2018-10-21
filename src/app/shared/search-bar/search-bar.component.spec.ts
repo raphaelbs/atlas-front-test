@@ -65,7 +65,7 @@ describe('SearchBarComponent', () => {
     expect(outputText).toBe('search text');
   });
 
-  it('should contain untranslated default text', () => {
+  it('should contain untranslated input placeholder', () => {
     fixture.detectChanges();
     const input = compiled.querySelector('.search-bar > input');
     expect(input.placeholder).toBe('shared-module.table-search-input');
