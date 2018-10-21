@@ -1,0 +1,22 @@
+@import '~styles.scss';
+
+.footer {
+  margin: 0 $_HEADER_PADDING_X;
+  height: $_HEADER_HEIGHT;
+
+  color: #9B9B9B;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 17px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
+
+  .social-media-icons img {
+    @extend .mx-2;
+
+    &:hover {
+      -webkit-filter: drop-shadow( 0 0 2px rgba(0, 0, 0, 0.1) );
+      filter: drop-shadow( 0 0 2px rgba(0, 0, 0, 0.1) );
+    }
+  }
+ }

@@ -13,5 +13,14 @@
       "percent": "%",
       "ammount": "Saldo"
     }
+  },
+  "footer": {
+    "copyright": "Atlas Quantum @ 2018. All rights reserved",
+    "social-media": {
+      "facebook": "https://pt-br.facebook.com/AtlasQuantum/",
+      "twitter": "https://twitter.com/atlasquantumbr",
+      "instagram": "https://www.instagram.com/atlasquantum/",
+      "youtube": "https://www.youtube.com/channel/UCMaBkMLfXfkHxfZb2Ja29Yg"
+    }
   }
 }
