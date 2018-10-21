@@ -10,7 +10,7 @@ class FakeLoader implements TranslateLoader {
   }
 }
 
-fdescribe('FooterComponent', () => {
+describe('FooterComponent', () => {
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
   let compiled;
