@@ -1,6 +1,6 @@
 <div class="search-bar">
-  <input placeholder="{{ 'shared-module.table-search-input' | translate }}"/>
-  <div class="search-button">
+  <input placeholder="{{ 'shared-module.table-search-input' | translate }}" [(ngModel)]="searchInput"/>
+  <div class="search-button" (click)="onSearch()">
     <img src="assets/ic_search_24px.svg" />
   </div>
 </div>
