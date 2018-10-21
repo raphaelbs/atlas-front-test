@@ -6,6 +6,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { LucrosViewComponent } from './lucros-view.component';
+import { SharedModule } from '../shared/shared.module';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/lucros-view/', '.json');
@@ -23,14 +24,16 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     HttpClientModule,
+    SharedModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       },
+      useDefaultLang: true,
       isolate: true
-  })
+    })
   ],
   declarations: [
     LucrosViewComponent

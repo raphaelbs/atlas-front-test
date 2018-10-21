@@ -1,7 +1,6 @@
 {
   "view-title": "Lucros",
   "view-description": "Relatório de distribuição de lucro",
-  "table-search-input": "Digite qualquer coisa da tabela",
   "card-title": "Distribuição de lucro (último mês)",
   "table-labels": {
     "date": "Data",

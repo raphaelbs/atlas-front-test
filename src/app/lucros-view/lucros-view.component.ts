@@ -10,7 +10,6 @@ export class LucrosViewComponent implements OnInit {
 
   constructor(private translateService: TranslateService) {
     this.translateService.setDefaultLang('pt-BR');
-    this.translateService.use('pt-BR');
   }
 
   ngOnInit() {
