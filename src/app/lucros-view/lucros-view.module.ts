@@ -1,7 +1,10 @@
-import { LucrosViewComponent } from './lucros-view.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+
+import { LucrosViewComponent } from './lucros-view.component';
+import { SharedModule } from '../shared/shared.module';
+
 
 const routes: Routes = [
   {
@@ -13,7 +16,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule,
   ],
   declarations: [
     LucrosViewComponent
