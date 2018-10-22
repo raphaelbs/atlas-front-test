@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private translateService: TranslateService) {
+  constructor(
+    private translateService: TranslateService,
+    ) {
     this.translateService.setDefaultLang('pt-BR');
   }
 }
