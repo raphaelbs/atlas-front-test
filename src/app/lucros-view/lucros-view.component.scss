@@ -51,10 +51,13 @@
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
         background-color: #F8F8F8;
         height: 50px;
-        color: rgba(0, 0, 0, 0.87);
-        font-family: 'Roboto';
-        font-size: 13px;
-        line-height: 15px;
+
+        mat-cell {
+          color: rgba(0, 0, 0, 0.87);
+          font-family: 'Roboto';
+          font-size: 13px;
+          line-height: 15px;
+        }
       }
     }
   }
