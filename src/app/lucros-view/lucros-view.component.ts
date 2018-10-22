@@ -1,55 +1,43 @@
+import { IDailyProfitDto } from './daily-profit.dto.interface';
+import { LucrosService } from './lucros.service';
 import { TranslateService } from '@ngx-translate/core';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IDailyProfit } from './daily-profit.interface';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-lucros-view',
   templateUrl: './lucros-view.component.html',
   styleUrls: ['./lucros-view.component.scss']
 })
-export class LucrosViewComponent implements OnInit {
+export class LucrosViewComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['date', 'coin', 'income', 'percent', 'ammount'];
-  dataSource: MatTableDataSource<IDailyProfit>;
+  dataSource: MatTableDataSource<IDailyProfitDto>;
+  subscription = new Subscription();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private translateService: TranslateService) {
+  constructor(
+    private translateService: TranslateService,
+    private lucrosService: LucrosService
+    ) {
     this.translateService.setDefaultLang('pt-BR');
   }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource<IDailyProfit>([
-      {
-        'dateMoviment': new Date('2018-11-07 21:51:03'),
-        'coin': 'BTC',
-        'proft': 0.668255,
-        'profitPercentage': 38
-      },
-      {
-        'dateMoviment': new Date('2019-01-05 14:12:55'),
-        'coin': 'BTC',
-        'proft': 2.725550,
-        'profitPercentage': 35
-      },
-    ]
-    .sort((date1, date2) => new Date(date1.dateMoviment) > new Date(date2.dateMoviment) ? 1 : -1)
-    .map((dailyProfit) => ({
-      date: dailyProfit.dateMoviment,
-      coin: dailyProfit.coin,
-      income: dailyProfit.proft,
-      percent: dailyProfit.profitPercentage,
-      ammount: dailyProfit.proft
-    }) as IDailyProfit)
-    .map((dailyProfit, index, refArray) => {
-      dailyProfit.ammount =
-        index > 0 ?
-          refArray[index - 1].ammount + dailyProfit.ammount :
-          dailyProfit.income / dailyProfit.percent;
-      return dailyProfit;
-    }));
+    this.dataSource = new MatTableDataSource<IDailyProfitDto>();
     this.dataSource.paginator = this.paginator;
+    this.subscription.add(
+      this.lucrosService.getLucros()
+      .subscribe(dailyProfits => {
+        this.dataSource.data = dailyProfits;
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   filter(search: string) {

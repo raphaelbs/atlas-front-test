@@ -5,6 +5,7 @@ import { MatTableModule, MatPaginatorModule } from '@angular/material';
 
 import { LucrosViewComponent } from './lucros-view.component';
 import { SharedModule } from '../shared/shared.module';
+import { LucrosService } from './lucros.service';
 
 
 const routes: Routes = [
@@ -24,6 +25,9 @@ const routes: Routes = [
   ],
   declarations: [
     LucrosViewComponent
+  ],
+  providers: [
+    LucrosService
   ],
   exports: [
     RouterModule
