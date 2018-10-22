@@ -34,7 +34,7 @@ $_HEADER_HEIGHT: 65px;
 $_HEADER_PADDING_X: 10%;
 
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 
 img.icon-default {

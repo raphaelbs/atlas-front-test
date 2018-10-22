@@ -18,7 +18,7 @@ export class LucrosService {
               date: new Date(dailyProfit.dateMoviment),
               coin: dailyProfit.coin,
               income: parseFloat(dailyProfit.proft),
-              percent: parseFloat(dailyProfit.profitPercentage),
+              percent: parseFloat(dailyProfit.profitPercentage) / 100,
               ammount: parseFloat(dailyProfit.proft)
             }) as IDailyProfitDto)
             .sort((date1, date2) => date1.date > date2.date ? 1 : -1)
