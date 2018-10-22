@@ -3,11 +3,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material';
 
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MatPaginatorI18n } from './mat-paginator-i18n';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,13 +24,9 @@ export function createTranslateLoader(http: HttpClient) {
       },
       useDefaultLang: true,
     }),
-    MatPaginatorModule,
   ],
   declarations: [
     SearchBarComponent,
-  ],
-  providers: [
-    { provide: MatPaginatorIntl, useClass: MatPaginatorI18n }
   ],
   exports: [
     SearchBarComponent,

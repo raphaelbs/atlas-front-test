@@ -4,37 +4,8 @@
       <div class="title">{{ 'lucros-view.view-title' | translate }}</div>
       <div class="sub-title mt-2">{{ 'lucros-view.view-description' | translate }}</div>
     </div>
-    <app-search-bar (searchEvent)="filter($event)"></app-search-bar>
+    <app-search-bar></app-search-bar>
   </div>
-  <div class="card-view mt-4 px-3 pt-4 pb-5">
-    <div class="card-title">{{ 'lucros-view.card-title' | translate }}</div>
-
-    <mat-table [dataSource]="dataSource" class="main-table">
-      <ng-container matColumnDef="date">
-        <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.date' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> {{ dailyProfit.date | date:'short' }} </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="coin">
-        <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.coin' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> {{ dailyProfit.coin }} </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="income">
-        <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.income' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> +{{ dailyProfit.income | number: '1.8-8' }} {{ dailyProfit.coin }} </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="percent">
-        <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.percent' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> {{ (dailyProfit.percent * 100) | number: '1.2-2' }}% </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="ammount">
-        <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.ammount' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> {{ dailyProfit.ammount | number: '1.8-8' }} {{ dailyProfit.coin }} </mat-cell>
-      </ng-container>
-
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
-
-    <mat-paginator [pageSizeOptions]="[4, 10]"></mat-paginator>
+  <div class="card-view">
   </div>
 </div>
