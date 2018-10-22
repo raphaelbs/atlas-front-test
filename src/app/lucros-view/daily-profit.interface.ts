@@ -1,7 +1,6 @@
 export interface IDailyProfit {
-  date: Date;
+  dateMoviment: string;
   coin: 'BTC';
-  income: number;
-  percent: number;
-  ammount: number;
+  proft: string;
+  profitPercentage: string;
 }
