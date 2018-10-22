@@ -1,3 +1,4 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MENU } from './../menu';
@@ -14,6 +15,9 @@ describe('SideMenuComponent', () => {
       declarations: [
         SideMenuComponent,
         SideMenuItemComponent
+      ],
+      imports: [
+        RouterTestingModule
       ]
     })
     .compileComponents();
@@ -33,7 +37,7 @@ describe('SideMenuComponent', () => {
   it('should find classes .side-menu, .img-container, .menu-container and .spacing', () => {
     expect(compiled.querySelector('.side-menu')).not.toBeNull();
     expect(compiled.querySelector('.side-menu > .img-container')).not.toBeNull();
-    expect(compiled.querySelector('.side-menu > .img-container > img')).not.toBeNull();
+    expect(compiled.querySelector('.side-menu > .img-container img')).not.toBeNull();
     expect(compiled.querySelector('.side-menu .menu-container')).not.toBeNull();
     expect(compiled.querySelector('.side-menu .menu-container > .spacing')).not.toBeNull();
   });
