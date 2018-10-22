@@ -19,6 +19,50 @@
         text-align: left;
       }
     }
+  }
 
+  .card-view {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+
+    .card-title {
+      color: #3C3C3C;
+      font-family: 'Roboto';
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    mat-table.main-table {
+      width: 100%;
+
+      mat-header-row {
+        height: 50px;
+        color: rgba(0, 0, 0, 0.54);
+        font-family: 'Roboto';
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+      }
+
+      tbody {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+        tr {
+          background-color: #F8F8F8;
+          height: 50px;
+          color: rgba(0, 0, 0, 0.87);
+          font-family: 'Roboto';
+          font-size: 13px;
+          line-height: 15px;
+
+          &.bordered {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
+    }
   }
 }
