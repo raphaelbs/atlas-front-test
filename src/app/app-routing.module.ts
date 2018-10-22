@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: './lucros-view/lucros-view.module#LucrosViewModule'
   },
   {
-    path: 'home',
-    loadChildren: './home-view/home-view.module#HomeViewModule'
-  },
-  {
     path: '',
     redirectTo: 'lucros',
     pathMatch: 'full'
