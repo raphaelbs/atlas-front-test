@@ -43,7 +43,10 @@ export class LucrosViewComponent implements OnInit {
       ammount: dailyProfit.proft
     }) as IDailyProfit)
     .map((dailyProfit, index, refArray) => {
-      dailyProfit.ammount = index > 0 ? refArray[index - 1].ammount : dailyProfit.ammount;
+      dailyProfit.ammount =
+        index > 0 ?
+          refArray[index - 1].ammount + dailyProfit.ammount :
+          dailyProfit.income / dailyProfit.percent;
       return dailyProfit;
     }));
     this.dataSource.paginator = this.paginator;

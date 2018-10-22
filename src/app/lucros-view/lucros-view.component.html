@@ -20,15 +20,15 @@
       </ng-container>
       <ng-container matColumnDef="income">
         <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.income' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> +{{ dailyProfit.income }} {{ dailyProfit.coin }} </mat-cell>
+        <mat-cell *matCellDef="let dailyProfit"> +{{ dailyProfit.income | number: '1.8-8' }} {{ dailyProfit.coin }} </mat-cell>
       </ng-container>
       <ng-container matColumnDef="percent">
         <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.percent' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> {{ dailyProfit.percent }} </mat-cell>
+        <mat-cell *matCellDef="let dailyProfit"> {{ dailyProfit.percent | number: '1.2-2' }}% </mat-cell>
       </ng-container>
       <ng-container matColumnDef="ammount">
         <mat-header-cell *matHeaderCellDef> {{ 'lucros-view.table-labels.ammount' | translate }} </mat-header-cell>
-        <mat-cell *matCellDef="let dailyProfit"> {{ dailyProfit.ammount }} {{ dailyProfit.coin }} </mat-cell>
+        <mat-cell *matCellDef="let dailyProfit"> {{ dailyProfit.ammount | number: '1.8-8' }} {{ dailyProfit.coin }} </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
