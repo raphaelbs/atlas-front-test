@@ -5,10 +5,10 @@ import { Observable } from 'rxjs/Observable';
 
 import { AppComponent } from './app.component';
 
-import { HeaderComponent } from './header/header.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
-import { SideMenuItemComponent } from './side-menu/side-menu-item/side-menu-item.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { SideMenuItemComponent } from './components/side-menu/side-menu-item/side-menu-item.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 class FakeLoader implements TranslateLoader {
   getTranslation(lang: string): Observable<any> {

@@ -2,7 +2,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SideMenuItemComponent } from './side-menu-item.component';
-import { MENU } from './../../menu';
+import { MENU } from './../../../menu';
 
 describe('SideMenuItemComponent', () => {
   let component: SideMenuItemComponent;

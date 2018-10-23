@@ -1,14 +1,14 @@
-import { IDailyProfitDto } from './daily-profit.dto.interface';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LucrosService } from './lucros.service';
-import { MatTableModule, MatPaginatorModule } from '@angular/material';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Observable } from 'rxjs/Observable';
 import { FormsModule } from '@angular/forms';
+import { MatTableModule, MatPaginatorModule } from '@angular/material';
 
+import { LucrosService } from './../../modules/core/lucros-service/lucros.service';
+import { SearchBarComponent } from './../../modules/shared/search-bar/search-bar.component';
+import { IDailyProfitDto } from '../../modules/core/interfaces/daily-profit.dto.interface';
 import { LucrosViewComponent } from './lucros-view.component';
-import { SearchBarComponent } from './../shared/search-bar/search-bar.component';
 
 class FakeLoader implements TranslateLoader {
   getTranslation(lang: string): Observable<any> {

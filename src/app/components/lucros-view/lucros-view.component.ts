@@ -1,9 +1,10 @@
-import { IDailyProfitDto } from './daily-profit.dto.interface';
-import { LucrosService } from './lucros.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
 import { Subscription } from 'rxjs/Subscription';
+
+import { IDailyProfitDto } from '../../modules/core/interfaces/daily-profit.dto.interface';
+import { LucrosService } from './../../modules/core/lucros-service/lucros.service';
 
 @Component({
   selector: 'app-lucros-view',

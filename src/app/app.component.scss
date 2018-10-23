@@ -1,12 +1,12 @@
 @import '~styles.scss';
 
 :host {
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
 
   div.main {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
 
     div.router-container {
       background-color: $_MAIN_OUTLET_BG_COLOR;

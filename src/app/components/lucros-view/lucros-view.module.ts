@@ -3,10 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { MatTableModule, MatPaginatorModule } from '@angular/material';
 
+import { SharedModule } from './../../modules/shared/shared.module';
 import { LucrosViewComponent } from './lucros-view.component';
-import { SharedModule } from '../shared/shared.module';
-import { LucrosService } from './lucros.service';
-
 
 const routes: Routes = [
   {
@@ -25,9 +23,6 @@ const routes: Routes = [
   ],
   declarations: [
     LucrosViewComponent
-  ],
-  providers: [
-    LucrosService
   ],
   exports: [
     RouterModule
