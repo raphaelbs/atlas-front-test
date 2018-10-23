@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
-import { IDailyProfit } from './daily-profit.interface';
-import { IDailyProfitDto } from './daily-profit.dto.interface';
+import { IDailyProfit } from '../interfaces/daily-profit.interface';
+import { IDailyProfitDto } from '../interfaces/daily-profit.dto.interface';
 
 @Injectable()
 export class LucrosService {

@@ -42,7 +42,7 @@ describe('LucrosService', () => {
       ]);
     });
 
-    const req = httpMock.expectOne('http://www.mocky.io/v2/5b2c010d300000100023487a');
+    const req = httpMock.expectOne('https://www.mocky.io/v2/5b2c010d300000100023487a');
     expect(req.request.method).toBe('GET');
     req.flush([
       {

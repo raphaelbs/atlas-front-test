@@ -7,7 +7,7 @@ import { MatTableModule, MatPaginatorModule } from '@angular/material';
 
 import { LucrosService } from './../../modules/core/lucros-service/lucros.service';
 import { SearchBarComponent } from './../../modules/shared/search-bar/search-bar.component';
-import { IDailyProfitDto } from '../../modules/core/lucros-service/daily-profit.dto.interface';
+import { IDailyProfitDto } from '../../modules/core/interfaces/daily-profit.dto.interface';
 import { LucrosViewComponent } from './lucros-view.component';
 
 class FakeLoader implements TranslateLoader {
