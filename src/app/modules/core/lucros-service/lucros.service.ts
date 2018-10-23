@@ -1,7 +1,8 @@
-import { IDailyProfit } from './daily-profit.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+
+import { IDailyProfit } from './daily-profit.interface';
 import { IDailyProfitDto } from './daily-profit.dto.interface';
 
 @Injectable()
@@ -10,7 +11,7 @@ export class LucrosService {
   constructor(private httpClient: HttpClient) { }
 
   getLucros() {
-    return this.httpClient.get('http://www.mocky.io/v2/5b2c010d300000100023487a')
+    return this.httpClient.get('https://www.mocky.io/v2/5b2c010d300000100023487a')
       .pipe(
         map((dailyProfits: IDailyProfit[]) =>
           dailyProfits

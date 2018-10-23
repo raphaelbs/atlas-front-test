@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from './../interfaces/user.interface';
-import { USER } from './../user';
+import { USER } from './../../user';
 
 @Component({
   selector: 'app-header',
