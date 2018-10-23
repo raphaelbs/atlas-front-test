@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'lucros',
-    loadChildren: './lucros-view/lucros-view.module#LucrosViewModule'
+    path: '',
+    loadChildren: './components/lucros-view/lucros-view.module#LucrosViewModule'
   },
   {
     path: '',
-    redirectTo: 'lucros',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];
