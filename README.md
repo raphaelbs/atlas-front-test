@@ -1,4 +1,4 @@
-# Atlas Front Test - Lucros
+# Front Test - Lucros
 [![Build Status](https://travis-ci.org/raphaelbs/atlas-front-test.svg?branch=develop)](https://travis-ci.org/raphaelbs/atlas-front-test)
 
 Este é um projeto de teste para seleção. Basea-se nas tecnologias Angular 5, Typescript e Versionamento com git.
